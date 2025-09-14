@@ -11,7 +11,6 @@ export const ProjectSection = () => {
                 <p>Last Updated - 20th of August</p>
             </TextContentWrapper>
             <Carousel></Carousel>
-            <Card></Card>
         </Container>
     )
 }

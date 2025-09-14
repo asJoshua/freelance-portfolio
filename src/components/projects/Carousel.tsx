@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import '../../styles/carousel.css';
 import { gsap } from 'gsap';
 import { Observer } from 'gsap/Observer';
+import { Card } from './Card';
 gsap.registerPlugin(Observer);
 
 const Carousel = () => {
@@ -56,8 +57,9 @@ const Carousel = () => {
           360 * -theta
         }deg)`;
 
-        const hue = Math.floor((index / images.length) * 360);
-        el.style.background = `hsla(${hue}, 90%, 50%, .5)`;
+      const opacity = Math.max(0, Math.min(1, (y + radius) / (2 * radius)));
+      el.style.opacity = opacity.toString();
+
       });
     };
 
@@ -76,7 +78,7 @@ const Carousel = () => {
           className="carousel-image"
           ref={(el) => setImageRef(el, i)}
         >
-          {i + 1}
+          <Card style={{ width: '250px', margin: '4px', overflow: 'hidden' }}/>
         </div>
       ))}
     </div>

@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  transform: rotateX(-20deg) translateY(-70px);
+  height: 600px;
+  transform: rotateX(-15deg) translateY(-70px);
   transform-style: preserve-3d;
   perspective: 800px;
   user-select: none;

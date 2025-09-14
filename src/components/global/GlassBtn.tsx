@@ -1,10 +1,11 @@
-import React from 'react';
+import { CSSProperties } from "react";
 
 interface GlassBtnProps {
-  children: string; // text content only
+  children: string;
+  style?: CSSProperties;
 }
 
-export const GlassBtn = ({ children }: GlassBtnProps) => {
+export const GlassBtn = ({ children, style }: GlassBtnProps) => {
   return (
     <div
       style={{
@@ -16,6 +17,7 @@ export const GlassBtn = ({ children }: GlassBtnProps) => {
         borderRadius: '6.25rem',
         background: 'rgba(255, 255, 255, 0.10)',
         cursor: 'pointer',
+        ...style
       }}
     >
       <svg

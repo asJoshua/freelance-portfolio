@@ -23,8 +23,10 @@
   --h2-lineHeight: 56px;
   --h3-fontSize: 36px;
   --h3-lineHeight: 44px;
-  --p-fontSize: 18px;
-  --p-lineHeight: 28px;
+  --h4-fontSize: 14px;
+  --h4-lineHeight: 18px;
+  --p-fontSize: 12px;
+  --p-lineHeight: 16px;
 }
 
 body {
@@ -46,13 +48,20 @@ h2 {
   font-size: var(--h2-fontSize);
   line-height: var(--h2-lineHeight);
   font-weight: 600;
-  color: var(--secondaryText);
+  color: var(--primaryText);
 }
 
 h3 {
   font-size: var(--h3-fontSize);
   line-height: var(--h3-lineHeight);
   font-weight: 500;
+  color: var(--secondaryText);
+}
+
+h4 {
+  font-size: var(--h4-fontSize);
+  line-height: var(--h4-lineHeight);
+  font-weight: 600;
   color: var(--secondaryText);
 }
 

@@ -1,8 +1,9 @@
-import React, { ReactNode, CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import { GlassBtn } from '../global/GlassBtn';
-import dummyImage from '../../assets/JSLogo.svg'
+import dummyImage from '../../assets/DummyImage.png';
 import { IconContentWrapper } from '../global/IconContentWrapper';
 import { TextContentWrapper } from '../global/TextContentWrapper';
+import { motion } from 'framer-motion';
 
 interface Cardprops {
   style?: CSSProperties;
@@ -10,53 +11,58 @@ interface Cardprops {
 
 export const Card = ({ style }: Cardprops) => {
   return (
-    <div
+    <motion.div
+      className="card"
       style={{
-            display: 'flex',
-            flexDirection: 'column',
-            maxWidth: '21.875rem',
-            height: '21.875rem',
-            justifyContent: 'center',
-            alignItems: 'center',
-            background: 'rgba(255, 255, 255, 0.10)',
-            cursor: 'pointer',
-            padding: '1.25rem',
-            borderRadius: '16px',
-        ...style,                
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: '16px',
+        maxWidth: '350px',
+        background: 'rgba(255, 255, 255, 0.10)',
+        cursor: 'pointer',
+        ...style,
+      }}
+      whileHover={{
+        scale: 1.05,
+        border: '2px solid #e6e0f2',
+        boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 220,
+        damping: 15,
       }}
     >
-      <div className='image'
+      <img
+        src={dummyImage}
+        alt="Dummy"
         style={{
-          height: '100%',
-          width: '100%',
-          backgroundImage: `url(${dummyImage})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}>
-      </div>
-      <div className='content'
+          borderTopLeftRadius: '16px',
+          borderTopRightRadius: '16px',
+          objectFit: 'cover',
+        }}
+      />
+
+      <div
+        className="content-wrapper"
         style={{
           display: 'flex',
           flexDirection: 'column',
-          padding: "1rem",
-          flexShrink: 0,
-          maxHeight: "50%",
-        }}>
-          <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
+          padding: '8px',
+          gap: '8px',
+        }}
+      >
+        <TextContentWrapper alignItems="flex-start">
+          <h4>CHIL Data Viewing WebApp</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </TextContentWrapper>
 
-          }}>
-            <h4>CHIL Data Viewing WebApp</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac malesuada elit. Aenean condimentum ligula tortor.</p>
-          </div>
-          <IconContentWrapper>
-            <GlassBtn children='React.js'></GlassBtn>
-            <GlassBtn children='TypeScript'></GlassBtn>
-            <GlassBtn children='Django'></GlassBtn>
-          </IconContentWrapper>
+        <IconContentWrapper>
+          <GlassBtn style={{fontSize: '10px', padding: '4px'}}>React.js</GlassBtn>
+          <GlassBtn style={{fontSize: '10px', padding: '4px'}}>TypeScript</GlassBtn>
+          <GlassBtn style={{fontSize: '10px',padding: '4px'}}>Django</GlassBtn>
+        </IconContentWrapper>
       </div>
-    </div>
+    </motion.div>
   );
 };

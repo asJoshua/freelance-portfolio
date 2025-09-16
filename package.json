@@ -12,6 +12,7 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
+    "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
     "motion": "^12.23.12",
     "react": "^19.1.1",

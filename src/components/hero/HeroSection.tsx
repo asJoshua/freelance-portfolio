@@ -1,25 +1,40 @@
-import sprialUrl from '../../assets/HeroVector.svg'
-import { GlassBtn } from '../global/GlassBtn';
-import { IconContentWrapper } from '../global/IconContentWrapper';
-import { Container } from '../global/SectionContainer';
-import { TextContentWrapper } from '../global/TextContentWrapper';
+import { motion } from "framer-motion";
+import { fadeInParent, fadeInChild } from "../../styles/animations";
+import sprialUrl from "../../assets/HeroVector.svg";
+import { GlassBtn } from "../global/GlassBtn";
+import { IconContentWrapper } from "../global/IconContentWrapper";
+import { Container } from "../global/SectionContainer";
+import { TextContentWrapper } from "../global/TextContentWrapper";
 
-export const HeroSection = () => {
-    return (
-        <Container>
-            <TextContentWrapper alignItems='flex-start'>
-                <h1>JOSHUA SADLEIR</h1>
-                <h3>Full-Stack Developer</h3>
-                <IconContentWrapper>
-                    <GlassBtn children={'Github'}></GlassBtn>
-                    <GlassBtn children={'LinkedIn'}></GlassBtn>
-                    <GlassBtn children={'CV'}></GlassBtn>
-                </IconContentWrapper>
-            </TextContentWrapper>
-            <div>
-                <img src={sprialUrl} alt="" />
-            </div>
-        </Container>
-        
-    );
-}
+export const HeroSection: React.FC = () => {
+  return (
+    <Container>
+      <motion.div
+        variants={fadeInParent}
+        initial="hidden"
+        animate="show"
+        style={{ display: 'flex '}}
+      >
+        <TextContentWrapper alignItems="flex-start">
+          <motion.h1 variants={fadeInChild}>JOSHUA SADLEIR</motion.h1>
+          <motion.h3 variants={fadeInChild}>Full-Stack Developer</motion.h3>
+          <IconContentWrapper>
+            <motion.div variants={fadeInChild}>
+              <GlassBtn>Github</GlassBtn>
+            </motion.div>
+            <motion.div variants={fadeInChild}>
+              <GlassBtn>LinkedIn</GlassBtn>
+            </motion.div>
+            <motion.div variants={fadeInChild}>
+              <GlassBtn>CV</GlassBtn>
+            </motion.div>
+          </IconContentWrapper>
+        </TextContentWrapper>
+
+        <motion.div variants={fadeInChild}>
+          <img src={sprialUrl} alt="spiral vector" />
+        </motion.div>
+      </motion.div>
+    </Container>
+  );
+};

@@ -3,7 +3,7 @@ import { TextContentWrapper } from "../global/TextContentWrapper"
 
 export const AboutSection = () => {
     return (
-        <Container flexDirection="column">
+        <Container flexDirection="column" style={{gap: '4rem'}}>
             <TextContentWrapper>
                 <h2>ABOUT ME</h2>
             </TextContentWrapper>

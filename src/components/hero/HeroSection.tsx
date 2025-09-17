@@ -6,7 +6,7 @@ import { IconContentWrapper } from "../global/IconContentWrapper";
 import { Container } from "../global/SectionContainer";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 
-export const HeroSection: React.FC = () => {
+export const HeroSection = () => {
   return (
     <Container>
       <motion.div

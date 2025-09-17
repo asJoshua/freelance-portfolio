@@ -8,7 +8,6 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Framer Motion variants
   const navLinksVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1, duration: 0.3 } },

@@ -15,7 +15,7 @@ export const theme = {
     h1: { fontSize: '60px', lineHeight: '72px', fontWeight: 700 },
     h2: { fontSize: '48px', lineHeight: '56px', fontWeight: 700 },
     h3: { fontSize: '36px', lineHeight: '44px', fontWeight: 700 },
-    h4: { fontSize: '12px', lineHeight: '14px', fontWeight: 700 },
+    h4: { fontSize: '18px', lineHeight: '20px', fontWeight: 700 },
     p: { fontSize: '12px', lineHeight: '14px', fontWeight: 400 },
   },
 };

@@ -23,8 +23,8 @@
   --h2-lineHeight: 56px;
   --h3-fontSize: 36px;
   --h3-lineHeight: 44px;
-  --h4-fontSize: 14px;
-  --h4-lineHeight: 18px;
+  --h4-fontSize: 18px;
+  --h4-lineHeight: 20px;
   --p-fontSize: 12px;
   --p-lineHeight: 16px;
 }
@@ -68,5 +68,13 @@ h4 {
 p {
   font-size: var(--p-fontSize);
   line-height: var(--p-lineHeight);
+  color: var(--primaryText);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
   color: var(--primaryText);
 }

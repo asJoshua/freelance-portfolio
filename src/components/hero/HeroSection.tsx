@@ -5,7 +5,7 @@ import { GlassBtn } from "../global/GlassBtn";
 import { IconContentWrapper } from "../global/IconContentWrapper";
 import { Container } from "../global/SectionContainer";
 import { TextContentWrapper } from "../global/TextContentWrapper";
-import { Github, LetterTextIcon, Linkedin, Mail } from "lucide-react";
+import { Github, LetterTextIcon, Linkedin} from "lucide-react";
 
 export const HeroSection = () => {
   return (

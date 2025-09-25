@@ -3,18 +3,25 @@ import { GlassBtn } from "../global/GlassBtn";
 import { IconContentWrapper } from "../global/IconContentWrapper";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 import { motion } from "framer-motion";
-import { LetterTextIcon } from "lucide-react";
+
+interface GlassBtnConfig {
+  label: string;
+  icon?: React.ReactNode;
+  link?: string;
+  newTab?: boolean;
+  style?: CSSProperties;
+}
 
 interface CardProps {
   style?: CSSProperties;
   title: string;
   description: string;
   image: string;
-  tech: string[]; // array of tech stack labels
-  link?: string; // optional project link
+  link?: string;
+  buttons: GlassBtnConfig[];
 }
 
-export const Card = ({ style, title, description, image, tech, link }: CardProps) => {
+export const Card = ({ style, title, description, image, link, buttons = [] }: CardProps) => {
   return (
     <motion.div
       className="card"
@@ -66,12 +73,16 @@ export const Card = ({ style, title, description, image, tech, link }: CardProps
         </TextContentWrapper>
 
         <IconContentWrapper>
-          <GlassBtn
-                  icon={<LetterTextIcon size={20} />}
-                  link="https://github.com/asJoshua"
-                  label="CV"
-                  newTab
-                />
+            {buttons.map((btn, idx) => (
+              <GlassBtn
+                key={idx}
+                icon={btn.icon}
+                label={btn.label}
+                link={btn.link}
+                newTab={btn.newTab}
+                style={btn.style}
+              />
+            ))}
         </IconContentWrapper>
       </div>
     </motion.div>

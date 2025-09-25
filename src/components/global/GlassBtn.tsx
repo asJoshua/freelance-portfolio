@@ -1,11 +1,11 @@
 import { CSSProperties, ReactNode } from "react";
 
 interface GlassBtnProps {
-  icon?: ReactNode;          // optional icon
-  label: string;             // text label
-  link?: string;             // optional link to navigate
-  newTab?: boolean;          // open link in new tab
-  style?: CSSProperties;     // optional custom styles
+  icon?: ReactNode;
+  label: string;
+  link?: string;            
+  newTab?: boolean;         
+  style?: CSSProperties;     
 }
 
 export const GlassBtn = ({

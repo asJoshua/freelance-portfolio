@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import { Card } from "./Card";
 import dummyImage from '../../assets/DummyImage.png'
+import { LetterTextIcon } from "lucide-react";
 
 gsap.registerPlugin(Observer);
 
@@ -15,7 +16,14 @@ const projects = [
     title: "Developer Portfolio",
     description: "My personal website to display who I am.",
     image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
+    buttons: [
+      {
+        label: "View CV",
+        icon: <LetterTextIcon size={16} />,
+        link: "https://github.com/asJoshua",
+        newTab: true,
+      },
+    ],
     link: "https://example.com/chil",
   },
   {
@@ -23,7 +31,9 @@ const projects = [
     title: "Developer Portfolio",
     description: "My personal website to display who I am.",
     image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
+    buttons: [
+
+    ],
     link: "https://example.com/chil",
   },
   {
@@ -31,7 +41,9 @@ const projects = [
     title: "Developer Portfolio",
     description: "My personal website to display who I am.",
     image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
+    buttons: [
+
+    ],
     link: "https://example.com/chil",
   },
   {
@@ -39,7 +51,9 @@ const projects = [
     title: "Developer Portfolio",
     description: "My personal website to display who I am.",
     image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
+    buttons: [
+
+    ],
     link: "https://example.com/chil",
   },
   {
@@ -47,7 +61,9 @@ const projects = [
     title: "Developer Portfolio",
     description: "My personal website to display who I am.",
     image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
+    buttons: [
+
+    ],
     link: "https://example.com/chil",
   },
   {
@@ -55,23 +71,9 @@ const projects = [
     title: "Developer Portfolio",
     description: "My personal website to display who I am.",
     image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
-    link: "https://example.com/chil",
-  },
-  {
-    id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
-    image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
-    link: "https://example.com/chil",
-  },
-  {
-    id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
-    image: dummyImage,
-    tech: ["React.js", "TypeScript", "GSAP"],
+    buttons: [
+
+    ],
     link: "https://example.com/chil",
   },
 ];
@@ -81,7 +83,6 @@ const Carousel = () => {
   const imagesRef = useRef<HTMLDivElement[]>([]);
   const progress = useRef({ value: 0 });
 
-  // Assign divs to the array ref
   const setImageRef = (el: HTMLDivElement | null, index: number) => {
     if (el) {
       imagesRef.current[index] = el;
@@ -152,7 +153,7 @@ const Carousel = () => {
             title={project.title}
             description={project.description}
             image={project.image}
-            tech={project.tech}
+            buttons={project.buttons}
             link={project.link}
             style={{ width: "250px", margin: "4px", overflow: "hidden" }}
           />

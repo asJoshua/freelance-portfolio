@@ -24,7 +24,7 @@ export const Navbar = () => {
   };
 
   return (
-    <motion.nav
+    <motion.nav className='navbar'
       style={{
         position: 'sticky',
         top: 0,
@@ -51,9 +51,9 @@ export const Navbar = () => {
             style={{
               display: 'flex',
               gap: '2rem',
-              flex: 1,
               justifyContent: 'center',
               alignItems: 'center',
+              flex: 1,
             }}
             variants={navLinksVariants}
             initial="hidden"

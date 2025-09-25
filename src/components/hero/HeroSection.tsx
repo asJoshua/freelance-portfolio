@@ -8,7 +8,7 @@ import { TextContentWrapper } from "../global/TextContentWrapper";
 
 export const HeroSection = () => {
   return (
-    <Container>
+    <Container style={{flexDirection: "row"}} className='hero'>
       <motion.div
         variants={fadeInParent}
         initial="hidden"
@@ -32,7 +32,7 @@ export const HeroSection = () => {
         </TextContentWrapper>
 
         <motion.div variants={fadeInChild}>
-          <img src={sprialUrl} alt="spiral vector" />
+          <img src={sprialUrl} alt="spiral vector" style={{maxWidth: '10vh'}}/>
         </motion.div>
       </motion.div>
     </Container>

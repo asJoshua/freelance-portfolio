@@ -6,7 +6,7 @@ import { fadeInChild, fadeInParent } from "../../styles/animations"
 
 export const ProjectSection = () => {
     return (
-        <Container flexDirection="column" style={{ gap:'0' }}>
+        <Container style={{ flexDirection:'column', gap:'0' }} className='projects'>
             <motion.div
             variants={fadeInParent}
                     initial="hidden"

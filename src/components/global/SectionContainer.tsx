@@ -1,23 +1,20 @@
-import React, { ReactNode, CSSProperties } from 'react';
+import React, { ReactNode, CSSProperties } from "react";
 
 interface ContainerProps {
   children: ReactNode;
+  className?: string;
   style?: CSSProperties;
-  flexDirection?: 'row' | 'column';
 }
 
-export const Container = ({ children, style, flexDirection = 'row' }: ContainerProps) => {
+export const Container: React.FC<ContainerProps> = ({
+  children,
+  className,
+  style,
+}) => {
   return (
     <div
-      style={{
-        display: 'flex',
-        flexDirection,           
-        padding: '4rem 8rem',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '8rem',
-        ...style,                
-      }}
+      className={`container ${className ?? ""}`}
+      style={{ display: "flex", ...style }}
     >
       {children}
     </div>

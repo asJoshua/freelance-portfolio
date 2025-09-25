@@ -29,8 +29,8 @@ const sections = [
 
 export const Footer = () => {
   return (
-    <footer>
-      <Container flexDirection="column" 
+    <footer className='footer'>
+      <Container
       style={{ 
         gap: "16px",
         background: 'rgba(255, 255, 255, 0.12)',

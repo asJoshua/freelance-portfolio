@@ -50,7 +50,7 @@ export const Navbar = () => {
           <motion.div
             style={{
               display: 'flex',
-              gap: '2rem',
+              gap: '2vw',
               justifyContent: 'center',
               alignItems: 'center',
               flex: 1,

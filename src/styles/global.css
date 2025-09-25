@@ -17,16 +17,21 @@
   --error: #FF5D5D;
 
   --fontFamily: 'Inter', sans-serif;
-  --h1-fontSize: 60px;
-  --h1-lineHeight: 72px;
-  --h2-fontSize: 48px;
-  --h2-lineHeight: 56px;
-  --h3-fontSize: 36px;
-  --h3-lineHeight: 44px;
-  --h4-fontSize: 18px;
-  --h4-lineHeight: 20px;
-  --p-fontSize: 12px;
-  --p-lineHeight: 16px;
+  --h1-fontSize: clamp(2rem, 5vw, 3.75rem);
+  --h1-lineHeight: clamp(2.5rem, 6vw, 4.5rem);
+
+  --h2-fontSize: clamp(1.75rem, 4vw, 3rem);
+  --h2-lineHeight: clamp(2.25rem, 5vw, 3.5rem);
+
+  --h3-fontSize: clamp(1.25rem, 3vw, 2.25rem);
+  --h3-lineHeight: clamp(1.75rem, 4vw, 2.75rem);
+
+  --h4-fontSize: clamp(1rem, 2vw, 1.125rem);
+  --h4-lineHeight: clamp(1.25rem, 2.2vw, 1.25rem);
+
+  --p-fontSize: clamp(0.875rem, 1.5vw, 1rem);
+  --p-lineHeight: clamp(1.25rem, 2vw, 1.5rem);
+
 }
 
 body {
@@ -77,6 +82,8 @@ li {
 
 a {
   color: var(--primaryText);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 .container {

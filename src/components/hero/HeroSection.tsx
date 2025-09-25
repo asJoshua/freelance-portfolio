@@ -5,6 +5,7 @@ import { GlassBtn } from "../global/GlassBtn";
 import { IconContentWrapper } from "../global/IconContentWrapper";
 import { Container } from "../global/SectionContainer";
 import { TextContentWrapper } from "../global/TextContentWrapper";
+import { Github, LetterTextIcon, Linkedin, Mail } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -20,13 +21,28 @@ export const HeroSection = () => {
           <motion.h3 variants={fadeInChild}>Full-Stack Developer</motion.h3>
           <IconContentWrapper>
             <motion.div variants={fadeInChild}>
-              <GlassBtn>Github</GlassBtn>
+              <GlassBtn
+                icon={<Github size={20} />}
+                link="https://github.com/asJoshua"
+                label="GitHub"
+                newTab
+              />
             </motion.div>
             <motion.div variants={fadeInChild}>
-              <GlassBtn>LinkedIn</GlassBtn>
+              <GlassBtn
+                icon={<Linkedin size={20} />}
+                link="https://www.linkedin.com/in/joshuasadleir/"
+                label="LinkedIn"
+                newTab
+              />
             </motion.div>
             <motion.div variants={fadeInChild}>
-              <GlassBtn>CV</GlassBtn>
+                <GlassBtn
+                  icon={<LetterTextIcon size={20} />}
+                  link="https://github.com/asJoshua"
+                  label="CV"
+                  newTab
+                />
             </motion.div>
           </IconContentWrapper>
         </TextContentWrapper>

@@ -3,6 +3,7 @@ import { GlassBtn } from "../global/GlassBtn";
 import { IconContentWrapper } from "../global/IconContentWrapper";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 import { motion } from "framer-motion";
+import { LetterTextIcon } from "lucide-react";
 
 interface CardProps {
   style?: CSSProperties;
@@ -65,11 +66,12 @@ export const Card = ({ style, title, description, image, tech, link }: CardProps
         </TextContentWrapper>
 
         <IconContentWrapper>
-          {tech.map((t, idx) => (
-            <GlassBtn key={idx} style={{ fontSize: "10px", padding: "4px" }}>
-              {t}
-            </GlassBtn>
-          ))}
+          <GlassBtn
+                  icon={<LetterTextIcon size={20} />}
+                  link="https://github.com/asJoshua"
+                  label="CV"
+                  newTab
+                />
         </IconContentWrapper>
       </div>
     </motion.div>

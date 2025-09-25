@@ -9,7 +9,6 @@ export default function Home() {
     <main>
       <Navbar></Navbar>
       <HeroSection></HeroSection>
-      <ProjectSection></ProjectSection>
       <AboutSection></AboutSection>
       <Footer></Footer>
     </main>

@@ -1,9 +1,24 @@
-import { useEffect, useRef } from 'react';
-import '../../styles/carousel.css';
-import { gsap } from 'gsap';
-import { Observer } from 'gsap/Observer';
-import { Card } from './Card';
+import { useEffect, useRef } from "react";
+import "../../styles/carousel.css";
+import { gsap } from "gsap";
+import { Observer } from "gsap/Observer";
+import { Card } from "./Card";
+import dummyImage from '../../assets/DummyImage.png'
+
 gsap.registerPlugin(Observer);
+
+
+//TO:DO convert to dynamic with backed - lngterm
+const projects = [
+  {
+    id: 1,
+    title: "Developer Portfolio",
+    description: "My personal website to display who I am.",
+    image: dummyImage,
+    tech: ["React.js", "TypeScript", "GSAP"],
+    link: "https://example.com/chil",
+  },
+];
 
 const Carousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -25,23 +40,23 @@ const Carousel = () => {
 
     Observer.create({
       target: carousel,
-      type: 'wheel,pointer',
+      type: "wheel,pointer",
       onPress: () => {
-        carousel.style.cursor = 'grabbing';
+        carousel.style.cursor = "grabbing";
       },
       onRelease: () => {
-        carousel.style.cursor = 'grab';
+        carousel.style.cursor = "grab";
       },
       onChange: (self) => {
         gsap.killTweensOf(progress.current);
         const delta =
-          self.event.type === 'wheel'
+          self.event.type === "wheel"
             ? self.deltaY * -0.0005
             : self.deltaX * 0.05;
 
         gsap.to(progress.current, {
           duration: 2,
-          ease: 'power4.out',
+          ease: "power4.out",
           value: progress.current.value + delta,
         });
       },
@@ -57,9 +72,8 @@ const Carousel = () => {
           360 * -theta
         }deg)`;
 
-      const opacity = Math.max(0, Math.min(1, (y + radius) / (2 * radius)));
-      el.style.opacity = opacity.toString();
-
+        const opacity = Math.max(0, Math.min(1, (y + radius) / (2 * radius)));
+        el.style.opacity = opacity.toString();
       });
     };
 
@@ -72,13 +86,20 @@ const Carousel = () => {
 
   return (
     <div className="carousel" ref={carouselRef}>
-      {Array.from({ length: 8 }).map((_, i) => (
+      {projects.map((project, i) => (
         <div
-          key={i}
+          key={project.id}
           className="carousel-image"
           ref={(el) => setImageRef(el, i)}
         >
-          <Card style={{ width: '250px', margin: '4px', overflow: 'hidden' }}/>
+          <Card
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            tech={project.tech}
+            link={project.link}
+            style={{ width: "250px", margin: "4px", overflow: "hidden" }}
+          />
         </div>
       ))}
     </div>

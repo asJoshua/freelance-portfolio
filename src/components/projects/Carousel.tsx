@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import { Card } from "./Card";
 import dummyImage from '../../assets/DummyImage.png'
-import { LetterTextIcon } from "lucide-react";
+import { CodeXml } from "lucide-react";
 
 gsap.registerPlugin(Observer);
 
@@ -18,63 +18,78 @@ const projects = [
     image: dummyImage,
     buttons: [
       {
-        label: "View CV",
-        icon: <LetterTextIcon size={16} />,
-        link: "https://github.com/asJoshua",
-        newTab: true,
+        label: "React.js",
+        icon: <CodeXml size={14} />,
+      },
+      {
+        label: "React.js",
+        icon: <CodeXml size={14} />,
       },
     ],
-    link: "https://example.com/chil",
+    link: 'https://joshuasadleir.com/'
   },
   {
     id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
+    title: "COMING SOON",
+    description: "...",
     image: dummyImage,
     buttons: [
-
+      
     ],
-    link: "https://example.com/chil",
   },
   {
     id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
+    title: "COMING SOON",
+    description: "...",
     image: dummyImage,
     buttons: [
-
+      
     ],
-    link: "https://example.com/chil",
   },
   {
     id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
+    title: "COMING SOON",
+    description: "...",
     image: dummyImage,
     buttons: [
-
+      
     ],
-    link: "https://example.com/chil",
   },
   {
     id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
+    title: "COMING SOON",
+    description: "...",
     image: dummyImage,
     buttons: [
-
+      
     ],
-    link: "https://example.com/chil",
   },
   {
     id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
+    title: "COMING SOON",
+    description: "...",
     image: dummyImage,
     buttons: [
-
+      
     ],
-    link: "https://example.com/chil",
+  },
+  {
+    id: 1,
+    title: "COMING SOON",
+    description: "...",
+    image: dummyImage,
+    buttons: [
+      
+    ],
+  },
+  {
+    id: 1,
+    title: "COMING SOON",
+    description: "...",
+    image: dummyImage,
+    buttons: [
+      
+    ],
   },
 ];
 
@@ -108,11 +123,11 @@ const Carousel = () => {
         gsap.killTweensOf(progress.current);
         const delta =
           self.event.type === "wheel"
-            ? self.deltaY * -0.0005
-            : self.deltaX * 0.05;
+            ? self.deltaY * -0.0003
+            : self.deltaX * 0.03;
 
         gsap.to(progress.current, {
-          duration: 2,
+          duration: 3,
           ease: "power4.out",
           value: progress.current.value + delta,
         });

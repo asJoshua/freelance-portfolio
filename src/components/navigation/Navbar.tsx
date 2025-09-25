@@ -24,7 +24,7 @@ export const Navbar = () => {
   };
 
   return (
-    <motion.nav className='navbar'
+    <motion.nav className='navbar glass'
       style={{
         position: 'sticky',
         top: 0,
@@ -32,9 +32,7 @@ export const Navbar = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '0.75rem 1.5rem',
-        background: 'rgba(255, 255, 255, 0.12)',
-        backdropFilter: 'blur(18px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(18px) saturate(180%)',
+
         color: 'var(--color-primary-text)',
         zIndex: 1000,
       }}
@@ -60,10 +58,16 @@ export const Navbar = () => {
             animate="visible"
             exit="hidden"
           >
-            {['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'].map((link) => (
+            {['HOME', 'PROJECTS', 'ABOUT'].map((link) => (
               <motion.a
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                onClick={(e) => {
+                e.preventDefault(); // prevent default anchor behavior
+                  const section = document.querySelector(`.${link.toLowerCase()}`);
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 style={{ color: 'var(--primaryText)', textDecoration: 'none' }}
                 variants={linkItemVariants}
                 whileHover={{ scale: 1.1, color: 'var(--accent)' }}

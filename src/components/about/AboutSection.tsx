@@ -5,7 +5,7 @@ import { fadeInChild, fadeInParent } from "../../styles/animations"
 
 export const AboutSection = () => {
     return (
-        <Container style={{justifyContent: 'center', alignItems: 'center'}}>
+        <Container style={{justifyContent: 'center', alignItems: 'center'}} className="about">
             <motion.div
                 variants={fadeInParent}
                 initial="hidden"

@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { GlassBtn } from "../global/GlassBtn";
+import { GlassLabel } from "../global/GlassLabel";
 import { IconContentWrapper } from "../global/IconContentWrapper";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 import { motion } from "framer-motion";
@@ -36,8 +36,6 @@ export const Card = ({ style, title, description, image, link, buttons = [] }: C
       }}
       whileHover={{
         scale: 1.05,
-        border: "2px solid #e6e0f2",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
       }}
       transition={{
         type: "spring",
@@ -72,14 +70,12 @@ export const Card = ({ style, title, description, image, link, buttons = [] }: C
           <p>{description}</p>
         </TextContentWrapper>
 
-        <IconContentWrapper>
+        <IconContentWrapper style={{fontSize: '1vh'}}>
             {buttons.map((btn, idx) => (
-              <GlassBtn
+              <GlassLabel
                 key={idx}
                 icon={btn.icon}
                 label={btn.label}
-                link={btn.link}
-                newTab={btn.newTab}
                 style={btn.style}
               />
             ))}

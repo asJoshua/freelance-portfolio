@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { CSSProperties, ReactNode } from "react";
 
 interface GlassBtnProps {
@@ -20,7 +21,7 @@ export const GlassBtn = ({
   };
 
   return (
-    <div
+    <motion.div className='glass'
       onClick={handleClick}
       style={{
        display: 'flex',
@@ -33,13 +34,21 @@ export const GlassBtn = ({
         cursor: 'pointer',
         ...style
       }}
+      whileHover={{
+        scale: 1.05,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 220,
+        damping: 15,
+      }}
     >
       {icon && (
-        <span style={{ display: 'flex', alignItems: 'center' }}>
+        <span style={{ display: 'flex', alignItems: 'center', color:'#7F3AFB' }}>
           {icon}
         </span>
       )}
       <span>{label}</span>
-    </div>
+    </motion.div>
   );
 };

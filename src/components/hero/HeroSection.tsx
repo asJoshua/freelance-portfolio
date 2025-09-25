@@ -9,7 +9,7 @@ import { Github, LetterTextIcon, Linkedin} from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <Container style={{flexDirection: "row"}} className='hero'>
+    <Container style={{flexDirection: "row"}} className='home'>
       <motion.div
         variants={fadeInParent}
         initial="hidden"

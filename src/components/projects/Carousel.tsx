@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import { Card } from "./Card";
 import dummyImage from '../../assets/DummyImage.png'
+import portfolioCardImage from '../../assets/PortfolioCardImage.png'
 import { CodeXml } from "lucide-react";
 
 gsap.registerPlugin(Observer);
@@ -13,16 +14,20 @@ gsap.registerPlugin(Observer);
 const projects = [
   {
     id: 1,
-    title: "Developer Portfolio",
-    description: "My personal website to display who I am.",
-    image: dummyImage,
+    title: "Freelance Portfolio",
+    description: "My personal website.",
+    image: portfolioCardImage,
     buttons: [
       {
         label: "React.js",
         icon: <CodeXml size={14} />,
       },
       {
-        label: "React.js",
+        label: "GSAP",
+        icon: <CodeXml size={14} />,
+      },
+      {
+        label: "TypeScript",
         icon: <CodeXml size={14} />,
       },
     ],

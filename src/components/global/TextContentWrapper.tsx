@@ -7,7 +7,7 @@ interface TextContentWrapperProps {
   
 }
 
-export const TextContentWrapper = ({ children, alignItems = 'center' }: TextContentWrapperProps) => {
+export const TextContentWrapper = ({ children, alignItems = 'center', style }: TextContentWrapperProps) => {
     return (
         <div style={{
             display: 'flex',

@@ -34,7 +34,7 @@ const projects = [
     link: 'https://joshuasadleir.com/'
   },
   {
-    id: 1,
+    id: 2,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,
@@ -43,7 +43,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,
@@ -52,7 +52,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,
@@ -61,7 +61,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 5,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,
@@ -70,7 +70,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 6,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,
@@ -79,7 +79,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 7,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,
@@ -88,7 +88,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 8,
     title: "COMING SOON",
     description: "...",
     image: dummyImage,

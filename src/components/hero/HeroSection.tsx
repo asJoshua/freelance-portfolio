@@ -5,15 +5,34 @@ import { IconContentWrapper } from "../global/IconContentWrapper";
 import { Container } from "../global/SectionContainer";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 import { Github, LetterTextIcon, Linkedin } from "lucide-react";
+import heroVector from "../../assets/HeroVector.svg";
 
 export const HeroSection = () => {
   return (
     <Container className="home">
+
+      <img
+        src={heroVector}
+        alt=""
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "80%",
+          maxWidth: "900px",
+          opacity: 0.13,
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
+
       <motion.div
         variants={fadeInParent}
         initial="hidden"
         animate="show"
-        style={{ display: "flex" }}
+        style={{ display: "flex", position: "relative", zIndex: 1  }}
       >
         <TextContentWrapper alignItems="flex-start">
           <motion.h1 variants={fadeInChild}>JOSHUA SADLEIR</motion.h1>
@@ -56,7 +75,7 @@ export const HeroSection = () => {
         variants={fadeInParent}
         initial="hidden"
         animate="show"
-        style={{ display: "flex" }}
+        style={{ display: "flex", position: "relative", zIndex: 1  }}
       >
         <TextContentWrapper alignItems="flex-start">
           <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>

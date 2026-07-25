@@ -10,21 +10,9 @@ export const AboutSection = () => {
                 variants={fadeInParent}
                 initial="hidden"
                 animate="show">
-                <TextContentWrapper >
-                    <motion.h2 variants={fadeInChild} style={{paddingBottom: '4rem'}}>ABOUT ME</motion.h2>
+                <TextContentWrapper alignItems="flex-start">
+                    <motion.h1 variants={fadeInChild}>SECTION</motion.h1>
                 </TextContentWrapper>
-                <iframe
-                    src="https://www.youtube.com/embed/vAoB4VbhRzM?si=QESZQqooRDzpaoCh" // replace with intro YouTube link
-                    title="About Me Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{
-                        width: "650px",       
-                        height: "500px",      
-                        maxWidth: "70vw",   
-                        maxHeight: "40vh"
-                    }}
-                ></iframe>
             </motion.div>
         </Container>
     )

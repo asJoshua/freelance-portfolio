@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -94,12 +95,23 @@ a {
   gap: 8rem;
 }
 
+.home {
+  min-height: 100vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
 /* Tablet (max 1024px) */
 @media (max-width: 1024px) {
   .container {
     padding: 3rem 4rem;
     gap: 4rem;
-    flex-direction: column; /* stack for readability */
+    flex-direction: column; 
+  }
+
+  .home {
+    min-height: auto;
+    justify-content: center;
   }
 }
 

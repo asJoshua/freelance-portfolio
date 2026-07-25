@@ -77,34 +77,42 @@ export const HeroSection = () => {
         animate="show"
         style={{ display: "flex", position: "relative", zIndex: 1  }}
       >
-        <TextContentWrapper alignItems="flex-start">
+        <TextContentWrapper alignItems="flex-start" style={{ gap: "1.5rem" }}>
           <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
-            Hi there! I'm Joshua, a detail-oriented, bilingual (
-            <strong>English/Spanish</strong>) Software Engineer graduate who
-            enjoys building full-stack applications end to end — from a
-            clean UI down to the API that backs it.
+            Hello! This is Joshua speaking. I am a graduate{" "}
+            <strong>Software Engineer</strong> who loves the details, be it
+            dynamic structuring on the frontend or clean code in the backend.
+            From the first conversation with a client to the final delivery of
+            a deployed product, I thrive building{" "}
+            <strong>full-stack applications</strong>.
           </motion.p>
           <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
-            My path here wasn't a straight line through tech. I spent years
-            in <strong>hospitality</strong>, working my way into managerial
-            roles that taught me how to stay calm under pressure and lead a
-            team through a busy shift — skills that translate directly into
-            how I handle deadlines and client expectations today.
+            I graduated with a degree in Applied Software Engineering from{" "}
+            <strong>Cardiff University</strong>. Alongside this, I have
+            multiple years of experience leading teams and creating standard
+            procedures for teams across multiple{" "}
+            <strong>hospitality environments</strong>. This cocktail of
+            experiences has allowed me to communicate technical parts of a
+            project to any level of user — a key skill to have when creating
+            products.
           </motion.p>
           <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
-            Alongside my studies, I took on <strong>freelance</strong>{" "}
-            projects, building sites and small applications for clients who
-            needed someone to own a project from first conversation to final
-            deploy. That experience pushed me to get comfortable across the{" "}
-            <strong>full stack</strong>, not just the parts I found most
-            interesting.
+            During my time at university, I worked alongside a team of 3–5
+            members each year to create a product from start to finish. In my
+            final year, we created a website to display{" "}
+            <strong>CHIL's satellite data</strong> from their sensors deployed
+            across the globe, where I personally led the{" "}
+            <strong>front-end development</strong> and client presentations,
+            alongside developing key <strong>API points</strong> for
+            communication with our backend framework.
           </motion.p>
           <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
-            Outside of code, I've competed in{" "}
-            <strong>competitive debate leagues</strong>, which sharpened how
-            I structure an argument and communicate under pressure — habits
-            that show up now in how I write documentation, explain
-            trade-offs to a team, or talk through a tricky bug.
+            Aside from the above, I have participated in multiple national-level{" "}
+            <strong>debate leagues</strong> with CICAE, won a regional{" "}
+            <strong>World Robotic Olympiad</strong>, and completed Wasteland's
+            ski rep training. If I am not working on my next project, you can
+            probably find me running, talking to people about a new random
+            topic, or working on a new cocktail.
           </motion.p>
         </TextContentWrapper>
       </motion.div>

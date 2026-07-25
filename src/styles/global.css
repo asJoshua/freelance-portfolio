@@ -97,6 +97,10 @@ a {
   justify-content: space-between;
 }
 
+strong {
+  color: var(--accent);
+  font-weight: 700;
+}
 
 /* Tablet (max 1024px) */
 @media (max-width: 1024px) {

@@ -13,7 +13,6 @@ export const ProjectSection = () => {
                     animate="show">
                 <TextContentWrapper>
                 <motion.h2 variants={fadeInChild}>PROJECT SHOWCASE</motion.h2>
-                <motion.p variants={fadeInChild}>Last Updated - 20th of August</motion.p>
                 </TextContentWrapper>
             </motion.div>
                 <Carousel></Carousel>

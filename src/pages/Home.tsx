@@ -1,4 +1,3 @@
-import { AboutSection } from "../components/about/AboutSection";
 import { HeroSection } from "../components/hero/HeroSection";
 import { Footer } from "../components/navigation/Footer";
 import { Navbar } from "../components/navigation/Navbar";
@@ -10,7 +9,6 @@ export default function Home() {
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <ProjectSection></ProjectSection>
-      <AboutSection></AboutSection>
       <Footer></Footer>
     </main>
   );

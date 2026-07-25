@@ -59,20 +59,20 @@ export const HeroSection = () => {
         style={{ display: "flex" }}
       >
         <TextContentWrapper alignItems="flex-start">
-          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch" }}>
+          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
             Hi there! I'm Joshua, a detail-oriented, bilingual (
             <strong>English/Spanish</strong>) Software Engineer graduate who
             enjoys building full-stack applications end to end — from a
             clean UI down to the API that backs it.
           </motion.p>
-          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch" }}>
+          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
             My path here wasn't a straight line through tech. I spent years
             in <strong>hospitality</strong>, working my way into managerial
             roles that taught me how to stay calm under pressure and lead a
             team through a busy shift — skills that translate directly into
             how I handle deadlines and client expectations today.
           </motion.p>
-          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch" }}>
+          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
             Alongside my studies, I took on <strong>freelance</strong>{" "}
             projects, building sites and small applications for clients who
             needed someone to own a project from first conversation to final
@@ -80,7 +80,7 @@ export const HeroSection = () => {
             <strong>full stack</strong>, not just the parts I found most
             interesting.
           </motion.p>
-          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch" }}>
+          <motion.p variants={fadeInChild} style={{ maxWidth: "55ch", textAlign: "justify" }}>
             Outside of code, I've competed in{" "}
             <strong>competitive debate leagues</strong>, which sharpened how
             I structure an argument and communicate under pressure — habits

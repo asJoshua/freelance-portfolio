@@ -53,6 +53,7 @@ export const Footer = () => {
         style={{
           flexDirection: "column",
           gap: "3rem",
+          minHeight: "auto",
         }}
       >
         <motion.div

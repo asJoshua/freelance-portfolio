@@ -5,6 +5,7 @@ import { Observer } from "gsap/Observer";
 import { Card } from "./Card";
 import dummyImage from '../../assets/DummyImage.png'
 import portfolioCardImage from '../../assets/PortfolioCardImage.png'
+import CHILCardImage from '../../assets/CHILDataImage.png'
 import { CodeXml } from "lucide-react";
 
 gsap.registerPlugin(Observer);
@@ -35,12 +36,28 @@ const projects = [
   },
   {
     id: 2,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
+    title: "CHIL Data App",
+    description: "Data Visulisation.",
+    image: CHILCardImage,
     buttons: [
-      
+         {
+        label: "React.js",
+        icon: <CodeXml size={14} />,
+      },
+      {
+        label: "Django",
+        icon: <CodeXml size={14} />,
+      },
+      {
+        label: "TypeScript",
+        icon: <CodeXml size={14} />,
+      },
+      {
+        label: "Python",
+        icon: <CodeXml size={14} />,
+      },
     ],
+    link: 'https://chil-data-app.up.railway.app/home'
   },
   {
     id: 3,

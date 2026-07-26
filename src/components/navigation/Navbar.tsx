@@ -58,7 +58,7 @@ export const Navbar = () => {
             animate="visible"
             exit="hidden"
           >
-            {['HOME', 'PROJECTS', 'ABOUT'].map((link) => (
+            {['HOME', 'PROJECTS'].map((link) => (
               <motion.a
                 key={link}
                 onClick={(e) => {

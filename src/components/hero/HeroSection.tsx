@@ -6,6 +6,7 @@ import { Container } from "../global/SectionContainer";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 import { Github, LetterTextIcon, Linkedin } from "lucide-react";
 import heroVector from "../../assets/HeroVector.svg";
+import cv from "../../assets/Joshua_Sadleir_SE_CV.pdf";
 
 export const HeroSection = () => {
   return (
@@ -62,7 +63,7 @@ export const HeroSection = () => {
             <motion.div variants={fadeInChild}>
               <GlassBtn
                 icon={<LetterTextIcon size={20} />}
-                link="https://github.com/asJoshua"
+                link={cv}
                 label="CV"
                 newTab
               />

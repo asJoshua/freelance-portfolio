@@ -10,8 +10,8 @@ const sections = [
   {
     title: "PROJECTS",
     items: [
+      "PERSONAL PORTFOLIO",
       "CHIL DATA VISUALISATION",
-      "BIPSYNC ONBOARDING TOOL",
       "ADDITIONAL PROJECTS",
     ],
   },
@@ -27,9 +27,9 @@ const sections = [
 
 const contactLinks = [
   {
-    label: "Email",
+    label: "contact@joshuasadleir.com",
     icon: <Mail size={18} />,
-    link: "mailto:someone@example.com",
+    link: "mailto:contact@joshuasadleir.com",
   },
   {
     label: "GitHub",

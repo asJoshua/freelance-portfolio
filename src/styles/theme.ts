@@ -11,7 +11,7 @@ export const theme = {
     error: '#FF5D5D',
   },
   typography: {
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "'Montserrat', sans-serif",
 
     h1: { 
       fontSize: 'clamp(2rem, 5vw, 3.75rem)',      // 32px → 60px

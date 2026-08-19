@@ -33,7 +33,7 @@ export const Navbar = () => {
         justifyContent: 'space-between',
         padding: '0.75rem 1.5rem',
 
-        color: 'var(--color-primaryText)', 
+        color: 'var(--primaryText)',
         zIndex: 1000,
       }}
       initial="hidden"

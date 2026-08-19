@@ -21,7 +21,7 @@ export const GlassLabel = ({
         gap: '0.5rem',
         borderRadius: '6.25rem',
         cursor: 'pointer',
-        color: 'var(--secondary)',
+        color: 'var(--secondaryText)',
         ...style
       }}
     >

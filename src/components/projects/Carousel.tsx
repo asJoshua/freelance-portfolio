@@ -3,119 +3,15 @@ import "../../styles/carousel.css";
 import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import { Card } from "./Card";
-import dummyImage from '../../assets/DummyImage.png'
-import portfolioCardImage from '../../assets/PortfolioCardImage.png'
-import CHILCardImage from '../../assets/CHILDataImage.png'
-import { CodeXml } from "lucide-react";
+import { Project } from "../../data/types";
 
 gsap.registerPlugin(Observer);
 
+interface CarouselProps {
+  projects: Project[];
+}
 
-//TO:DO convert to dynamic with backed - lngterm
-const projects = [
-  {
-    id: 1,
-    title: "Freelance Portfolio",
-    description: "My personal website.",
-    image: portfolioCardImage,
-    buttons: [
-      {
-        label: "React.js",
-        icon: <CodeXml size={14} />,
-      },
-      {
-        label: "GSAP",
-        icon: <CodeXml size={14} />,
-      },
-      {
-        label: "TypeScript",
-        icon: <CodeXml size={14} />,
-      },
-    ],
-    link: 'https://joshuasadleir.com/'
-  },
-  {
-    id: 2,
-    title: "CHIL Data App",
-    description: "Data Visulisation.",
-    image: CHILCardImage,
-    buttons: [
-         {
-        label: "React.js",
-        icon: <CodeXml size={14} />,
-      },
-      {
-        label: "Django",
-        icon: <CodeXml size={14} />,
-      },
-      {
-        label: "TypeScript",
-        icon: <CodeXml size={14} />,
-      },
-      {
-        label: "Python",
-        icon: <CodeXml size={14} />,
-      },
-    ],
-    link: 'https://chil-data-app.up.railway.app/home'
-  },
-  {
-    id: 3,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
-    buttons: [
-      
-    ],
-  },
-  {
-    id: 4,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
-    buttons: [
-      
-    ],
-  },
-  {
-    id: 5,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
-    buttons: [
-      
-    ],
-  },
-  {
-    id: 6,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
-    buttons: [
-      
-    ],
-  },
-  {
-    id: 7,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
-    buttons: [
-      
-    ],
-  },
-  {
-    id: 8,
-    title: "COMING SOON",
-    description: "...",
-    image: dummyImage,
-    buttons: [
-      
-    ],
-  },
-];
-
-const Carousel = () => {
+const Carousel = ({ projects }: CarouselProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const imagesRef = useRef<HTMLDivElement[]>([]);
   const progress = useRef({ value: 0 });
@@ -187,11 +83,7 @@ const Carousel = () => {
           ref={(el) => setImageRef(el, i)}
         >
           <Card
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            buttons={project.buttons}
-            link={project.link}
+            project={project}
             style={{ width: "250px", margin: "4px", overflow: "hidden" }}
           />
         </div>

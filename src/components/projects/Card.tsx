@@ -1,27 +1,18 @@
 import { CSSProperties } from "react";
+import { motion } from "framer-motion";
 import { GlassLabel } from "../global/GlassLabel";
 import { IconContentWrapper } from "../global/IconContentWrapper";
 import { TextContentWrapper } from "../global/TextContentWrapper";
-import { motion } from "framer-motion";
-
-interface GlassBtnConfig {
-  label: string;
-  icon?: React.ReactNode;
-  link?: string;
-  newTab?: boolean;
-  style?: CSSProperties;
-}
+import { Project } from "../../data/types";
 
 interface CardProps {
+  project: Project;
   style?: CSSProperties;
-  title: string;
-  description: string;
-  image: string;
-  link?: string;
-  buttons: GlassBtnConfig[];
 }
 
-export const Card = ({ style, title, description, image, link, buttons = [] }: CardProps) => {
+export const Card = ({ project, style }: CardProps) => {
+  const { title, summary, image, imageAlt, tags, liveUrl } = project;
+
   return (
     <motion.div
       className="card"
@@ -43,12 +34,12 @@ export const Card = ({ style, title, description, image, link, buttons = [] }: C
         damping: 15,
       }}
       onClick={() => {
-        if (link) window.open(link, "_blank");
+        if (liveUrl) window.open(liveUrl, "_blank");
       }}
     >
       <img
         src={image}
-        alt={title}
+        alt={imageAlt ?? title}
         style={{
           borderTopLeftRadius: "16px",
           borderTopRightRadius: "16px",
@@ -67,18 +58,13 @@ export const Card = ({ style, title, description, image, link, buttons = [] }: C
       >
         <TextContentWrapper alignItems="flex-start">
           <h4>{title}</h4>
-          <p>{description}</p>
+          <p>{summary}</p>
         </TextContentWrapper>
 
-        <IconContentWrapper style={{fontSize: '1vh'}}>
-            {buttons.map((btn, idx) => (
-              <GlassLabel
-                key={idx}
-                icon={btn.icon}
-                label={btn.label}
-                style={btn.style}
-              />
-            ))}
+        <IconContentWrapper style={{ fontSize: "1vh" }}>
+          {tags.map((tag, idx) => (
+            <GlassLabel key={idx} icon={tag.icon} label={tag.label} />
+          ))}
         </IconContentWrapper>
       </div>
     </motion.div>

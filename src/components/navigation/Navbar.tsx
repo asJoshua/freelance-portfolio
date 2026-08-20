@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../assets/JSLogo.svg';
 import menuIcon from '../../assets/Menu.svg';
 import menuCloseIcon from '../../assets/MenuClose.svg';
+import { scrollToSection } from '../../utils/scrollTo';
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,11 +63,8 @@ export const Navbar = () => {
               <motion.a
                 key={link}
                 onClick={(e) => {
-                e.preventDefault(); // prevent default anchor behavior
-                  const section = document.querySelector(`.${link.toLowerCase()}`);
-                  if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  e.preventDefault(); // prevent default anchor behavior
+                  scrollToSection(`.${link.toLowerCase()}`);
                 }}
                 style={{ color: 'var(--primaryText)', textDecoration: 'none' }}
                 variants={linkItemVariants}

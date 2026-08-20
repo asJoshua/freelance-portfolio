@@ -7,6 +7,7 @@ import { TextContentWrapper } from "../global/TextContentWrapper";
 import { Github, LetterTextIcon, Linkedin } from "lucide-react";
 import heroVector from "../../assets/HeroVector.svg";
 import cv from "../../assets/Joshua_Sadleir_SE_CV.pdf";
+import { scrollToSection } from "../../utils/scrollTo";
 
 export const HeroSection = () => {
   return (
@@ -37,11 +38,34 @@ export const HeroSection = () => {
       >
         <TextContentWrapper alignItems="flex-start">
           <motion.h1 variants={fadeInChild}>JOSHUA SADLEIR</motion.h1>
-          <motion.h3 variants={fadeInChild}>Full-Stack Developer</motion.h3>
-          <motion.p variants={fadeInChild} style={{ maxWidth: "36ch" }}>
-            I build accessible, detail-oriented full-stack experiences for
-            the web.
+          {/* Semantically h2 (nested under the page's h1, with the section's own
+              h2 as a sibling) but kept at the original tagline's h3 visual scale. */}
+          <motion.h2
+            variants={fadeInChild}
+            style={{
+              fontSize: "var(--h3-fontSize)",
+              lineHeight: "var(--h3-lineHeight)",
+              fontWeight: 500,
+              color: "var(--secondaryText)",
+            }}
+          >
+            Full-Stack Developer for Hospitality &amp; Service Businesses
+          </motion.h2>
+          <motion.p variants={fadeInChild} style={{ maxWidth: "40ch" }}>
+            I build booking systems, staff dashboards, and workflow tools that
+            save hospitality and service businesses real time — grounded in
+            2+ years running venue operations as a GM and hospitality
+            supervisor, not just a portfolio built to look good. Bilingual in
+            English and Spanish.
           </motion.p>
+
+          <motion.div variants={fadeInChild} style={{ marginTop: "0.5rem" }}>
+            <GlassBtn
+              label="Get in touch"
+              variant="primary"
+              onClick={() => scrollToSection("#contact")}
+            />
+          </motion.div>
 
           <IconContentWrapper style={{ marginTop: "1rem" }}>
             <motion.div variants={fadeInChild}>

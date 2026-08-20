@@ -15,6 +15,7 @@ export const TextContentWrapper = ({ children, alignItems = 'center', style }: T
             justifyContent: 'center',
             alignItems,
             gap: '0.5rem',
+            ...style,
             }}>
                   {children}
         </div>

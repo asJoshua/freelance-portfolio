@@ -7,7 +7,6 @@ import { TextContentWrapper } from "../global/TextContentWrapper";
 import { Github, LetterTextIcon, Linkedin } from "lucide-react";
 import heroVector from "../../assets/HeroVector.svg";
 import cv from "../../assets/Joshua_Sadleir_CV_1.pdf";
-import { scrollToSection } from "../../utils/scrollTo";
 
 export const HeroSection = () => {
   return (

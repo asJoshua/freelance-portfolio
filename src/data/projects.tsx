@@ -1,6 +1,7 @@
 import { CodeXml } from "lucide-react";
 import portfolioCardImage from "../assets/PortfolioCardImage.png";
 import CHILCardImage from "../assets/CHILDataImage.png";
+import BipsyncCardImage from "../assets/BipSyncImage.png";
 import { Project } from "./types";
 
 // Add new projects here — Carousel/ProjectGrid render whatever this array contains,
@@ -49,10 +50,8 @@ export const projects: Project[] = [
       { label: "TypeScript", icon: <CodeXml size={14} /> },
       { label: "Python", icon: <CodeXml size={14} /> },
     ],
-    liveUrl: "https://chil-data-app.up.railway.app/home",
-    liveUrlNote:
-      "Hosted on Railway's free tier — the first load after inactivity can take 30–60 seconds to spin up. Please be patient on first visit.",
-    caseStudy: {
+    liveUrl: "https://github.com/asJoshua/CHIL-Data-Visualisation-Webapp",
+   caseStudy: {
       problem:
         "CHIL operates satellite-linked environmental sensors deployed across multiple global sites; the raw sensor data had no accessible front-end, so insights lived in raw exports rather than something a non-technical stakeholder could interpret quickly.",
       approach:
@@ -61,6 +60,31 @@ export const projects: Project[] = [
         "Delivered a working data-visualisation app, presented to and validated with the client, demonstrating an end-to-end pipeline from raw sensor data to an interpretable dashboard.",
       techStack: ["React", "TypeScript", "Django", "Python", "REST API integration"],
       role: "University team project (3–5 members) — led front-end development, API integration, and client presentations.",
+    },
+  },
+  {
+    id: "bipsync-tool",
+    title: "Bipsync Onboarding Tool",
+    summary:
+      "An onboarding tool for Bipsync's client onboarding process, built as a second-year university team project.",
+    image: BipsyncCardImage,
+    imageAlt: "Bipsync Onboarding Tool preview",
+    tags: [
+      { label: "SpringBoot", icon: <CodeXml size={14} /> },
+      { label: "Thymeleaf", icon: <CodeXml size={14} /> },
+      { label: "SQL", icon: <CodeXml size={14} /> },
+      { label: "HTML/CSS", icon: <CodeXml size={14} /> },
+    ],
+    liveUrl: "https://github.com/asJoshua/Bipsync-Onboarding-Tool",
+   caseStudy: {
+      problem:
+        "Bipsync needed a streamlined onboarding process for new clients; the existing manual procedures were time-consuming and error-prone.",
+      approach:
+        "As part of a 3 person second-year university team, I led front-end development and the client-facing presentations, building the SpringBoot and Thymeleaf interface and the API integration points connecting it to a SQL database — translating requirements from client meetings directly into working UI and data-fetching logic.",
+      outcome:
+        "Delivered a working onboarding tool, presented to and validated with the client, demonstrating an end-to-end pipeline from client requests to a functional onboarding system.",
+      techStack: ["SpringBoot", "Thymeleaf", "SQL", "HTML", "CSS"],
+      role: "University team project (3 members) — led front-end development, API integration, and client presentations.",
     },
   },
 ];

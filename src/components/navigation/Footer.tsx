@@ -9,15 +9,8 @@ import { fadeInChild, fadeInParent } from "../../styles/animations";
 const projectItems = [
   "PERSONAL PORTFOLIO",
   "CHIL DATA VISUALISATION",
-  "ADDITIONAL PROJECTS",
+  "BIPSYNC ONBOARDING TOOL",
 ];
-
-const servicesDescription =
-  "I build booking and reservation systems, staff scheduling and operations " +
-  "dashboards, and custom workflow tools for hospitality and service businesses " +
-  "— the kind of software that replaces spreadsheets and paper processes with " +
-  "something your team will actually use. Full-stack delivery, from the first " +
-  "client conversation to a deployed product.";
 
 const contactLinks = [
   {
@@ -90,15 +83,6 @@ export const Footer = ({ headingLevel = 4 }: FooterProps) => {
                   </li>
                 ))}
               </ul>
-            </TextContentWrapper>
-          </motion.div>
-
-          <motion.div variants={fadeInChild}>
-            <TextContentWrapper style={{ maxWidth: "32ch" }}>
-              <HeadingTag style={headingStyle}>SERVICES</HeadingTag>
-              <p style={{ color: "var(--mutedText)", textAlign: "center" }}>
-                {servicesDescription}
-              </p>
             </TextContentWrapper>
           </motion.div>
 

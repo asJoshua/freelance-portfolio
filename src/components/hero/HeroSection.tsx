@@ -6,7 +6,7 @@ import { Container } from "../global/SectionContainer";
 import { TextContentWrapper } from "../global/TextContentWrapper";
 import { Github, LetterTextIcon, Linkedin } from "lucide-react";
 import heroVector from "../../assets/HeroVector.svg";
-import cv from "../../assets/Joshua_Sadleir_SE_CV.pdf";
+import cv from "../../assets/Joshua_Sadleir_CV_1.pdf";
 import { scrollToSection } from "../../utils/scrollTo";
 
 export const HeroSection = () => {
@@ -49,22 +49,10 @@ export const HeroSection = () => {
               color: "var(--secondaryText)",
             }}
           >
-            Full-Stack Developer for Hospitality &amp; Service Businesses
+            Full-Stack Developer from Hospitality &amp; Service Businesses
           </motion.h2>
-          <motion.p variants={fadeInChild} style={{ maxWidth: "40ch" }}>
-            I build booking systems, staff dashboards, and workflow tools that
-            save hospitality and service businesses real time — grounded in
-            2+ years running venue operations as a GM and hospitality
-            supervisor, not just a portfolio built to look good. Bilingual in
-            English and Spanish.
-          </motion.p>
 
           <motion.div variants={fadeInChild} style={{ marginTop: "0.5rem" }}>
-            <GlassBtn
-              label="Get in touch"
-              variant="primary"
-              onClick={() => scrollToSection("#contact")}
-            />
           </motion.div>
 
           <IconContentWrapper style={{ marginTop: "1rem" }}>
